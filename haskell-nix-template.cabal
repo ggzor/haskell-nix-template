@@ -8,21 +8,30 @@ author:              ggzor
 maintainer:          30713864+ggzor@users.noreply.github.com
 build-type:          Simple
 
+common shared-properties
+  default-language:    Haskell2010
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+
 library
+  import:              shared-properties
   hs-source-dirs:      src
   exposed-modules:     MyLib
   build-depends:       base, microlens
-  default-language:    Haskell2010
 
 executable haskell-nix-template
+  import:              shared-properties
   hs-source-dirs:      app
   main-is:             Main.hs
   build-depends:       haskell-nix-template, base
-  default-language:    Haskell2010
 
 test-suite haskell-nix-template-test
+  import:              shared-properties
   hs-source-dirs:      test
   main-is:             MyLibTest.hs
   build-depends:       base
   type:                exitcode-stdio-1.0
-  default-language:    Haskell2010
