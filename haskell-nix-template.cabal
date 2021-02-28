@@ -16,6 +16,49 @@ common shared-properties
     -Wincomplete-record-updates
     -Wincomplete-uni-patterns
     -Wredundant-constraints
+  default-extensions:
+    EmptyCase
+    FlexibleContexts
+    FlexibleInstances
+    InstanceSigs
+    MultiParamTypeClasses
+
+    LambdaCase
+    MultiWayIf
+    NamedFieldPuns
+    TupleSections
+
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveLift
+    DeriveTraversable
+    DerivingStrategies
+    GeneralizedNewtypeDeriving
+    StandaloneDeriving
+
+    BangPatterns
+    KindSignatures
+    TypeOperators
+
+    OverloadedStrings
+
+    ScopedTypeVariables
+    TypeApplications
+
+    ConstraintKinds
+    RankNTypes
+
+    DefaultSignatures
+    PatternSynonyms
+
+    ExistentialQuantification
+    FunctionalDependencies
+    GADTs
+
+    DataKinds
+    TypeFamilies
+    TypeFamilyDependencies
 
 library
   import:              shared-properties
@@ -35,3 +78,4 @@ test-suite haskell-nix-template-test
   main-is:             MyLibTest.hs
   build-depends:       base
   type:                exitcode-stdio-1.0
+
