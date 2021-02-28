@@ -8,10 +8,21 @@ author:              ggzor
 maintainer:          30713864+ggzor@users.noreply.github.com
 build-type:          Simple
 
-executable haskell-nix-template
+library
   hs-source-dirs:      src
+  exposed-modules:     MyLib
+  build-depends:       base, microlens
+  default-language:    Haskell2010
+
+executable haskell-nix-template
+  hs-source-dirs:      app
   main-is:             Main.hs
-  build-depends:
-      base
-    , microlens
+  build-depends:       haskell-nix-template, base
+  default-language:    Haskell2010
+
+test-suite haskell-nix-template-test
+  hs-source-dirs:      test
+  main-is:             MyLibTest.hs
+  build-depends:       base
+  type:                exitcode-stdio-1.0
   default-language:    Haskell2010
