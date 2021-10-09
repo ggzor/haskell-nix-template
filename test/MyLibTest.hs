@@ -1,4 +1,10 @@
-module Main (main) where
+module MyLibTest where
 
-main :: IO ()
-main = putStrLn "Test suite not yet implemented."
+import MyLib
+import Test.Hspec as H
+
+spec :: H.Spec
+spec = do
+  describe "someFunc" $ do
+    it "returns uppercase parameter name" $ do
+      someFunc "someFunc" `shouldBe` "SOMEFUNC"

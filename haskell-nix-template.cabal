@@ -64,7 +64,9 @@ library
   import:              shared-properties
   hs-source-dirs:      src
   exposed-modules:     MyLib
-  build-depends:       base, microlens
+  build-depends:       
+      base
+    , microlens
 
 executable haskell-nix-template
   import:              shared-properties
