@@ -75,7 +75,10 @@ executable haskell-nix-template
 test-suite haskell-nix-template-test
   import:              shared-properties
   hs-source-dirs:      test
-  main-is:             MyLibTest.hs
-  build-depends:       base
+  main-is:             Spec.hs
+  build-depends:       
+      base
+    , haskell-nix-template
+    , hspec
   type:                exitcode-stdio-1.0
 
