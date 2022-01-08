@@ -26,6 +26,7 @@ in {
       compilerSet.cabal-install
       compilerSet.fourmolu
       compilerSet.haskell-language-server
+      compilerSet.hlint
     ];
   };
 }
